@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha512-NXUhxhkDgZYOMjaIgd89zF2w51Mub53Ru3zCNp5LTlEzMbNNAjTjDbpURYGS5Mop2cU4b7re1nOIucsVlrx9fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      a{
+          text-decoration: none;
+      }
+      body{
+          background-color: rgb(220, 220, 220);
+      }
+      header{
+          position: relative;
+      }
+      .rl-btn{
+          position: absolute;
+          right: 0;
+          top: 100%;
+          transform: translateX(20%) translateY(-10%);
+          z-index: 1;
+      }
+      .rl-btn li{
+          list-style: none;
+          border: 10px solid rgb(220, 220, 220);
+      }
+      .rl-btn li a{
+          color: black;
+      }
+
+      .nav-pills li a{
+          font-weight: 500;
+          color: black;
+          transition: all 0.5s;
+      }
+      .nav-pills li a:hover{
+          color: black;
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+      }
+      .nav-pills li .heigh-light{
+          background-color: rgb(35, 120, 92);
+          color: whitesmoke;
+      }
+
+
+      .slider {
+          display: flex;
+          align-items: center;
+      }
+
+      .card{
+          display: block;
+          margin: 10px 10px;
+          box-shadow: 5px 5px 10px rgb(50, 50, 50);
+          background-color: transparent;
+          border-radius: 15px;
+          justify-content: space-between;
+      }
+      .c-slider{
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .card a.btn{
+          width: 100px;
+          box-shadow: 2px 2px 5px black;
+          margin-right: 10px;
+      }
+      .card-body{
+         
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px ;
+          padding: 10px 0px 20px 20px;
+          background-color: #fff;
+      }
+
+      .slider-home{
+          background: url("https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&w=1000&q=80");
+          width: 100%;
+          height: 100%;
+          padding: 150px 50px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          display: flex;
+          justify-content: space-between;
+      }
+      .slider-home .col-6{
+          display: block;
+          text-align: end;
+          color: whitesmoke;
+          width: 40%;
+      }
+      .creat{
+          background-color: rgb(65, 65, 65);
+          color: azure;
+      }
+      .creat button{
+          width: 150px;
+          color: aliceblue;
+          font-weight: 700;
+          margin: 40px 0px;
+          text-transform: uppercase;
+      }
+      .hadding{
+          padding-left: 230px;
+      }
+      h1 , h3 , span , h4{
+          text-transform: capitalize;
+      }
+      .card-img-top{
+          width: 415px;
+          height: 280px;
+      }
+      .D-Btn{
+          text-decoration: none;
+          color: brown;
+          padding: 2px 8px 0px 8px;
+          border: 1px solid gray;
+          border-radius: 4px;
+          line-height: 1;
+      }
+      .Com-del{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+      }
+    
+      .quantity-counter {
+      display: flex;
+      }
+    
+      .value {
+          border: 1px solid #adadad;
+          border-radius: 3px;
+          margin: 0px 10px;
+          text-align: center;
+          height: 30px;
+          width: 80px;
+          align-items: center;
+      }
+      
+      .increment,.decrement {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          border-radius: 3px;
+          background-color:teal;
+          color: #fff;
+          height: 30px;
+          width: 30px;
+      }    
+    .cart-btn{
+        display: flex;
+        max-width: 100%;
+        justify-content: end;
+    }
+    .buy-btn{
+        flex-basis: 40%;
+    }
+    form{
+        display: contents;
+    }
+    .card img{
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px gray;
+    }
+    .select{
+        margin: 0 auto;
+        text-align: center;
+        width: 300px;
+        padding: 5px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px gray;
+    }
+    .category{
+        width: 295px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .category a{
+        color: black;
+        text-align: center;
+        display: block;
+    }
+  
+    .category li{
+        padding: 2px 0px;
+    }
+    .btn-secondary {
+        padding: 10px 45px;
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+}
+  </style>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-md-auto gap-2">
+                 
+                  <li class="nav-item rounded">
+                    <% if(user.roll == 'admin'){ %>
+                        <a class="nav-link active" aria-current="page" href="/product/adminPanel">Addmin Panel</a>
+                    <% } %>
+                  </li>
+                  
+                  <li class="nav-item rounded">
+                    <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                  </li>
+                  <li class="nav-item rounded">
+                        <a class="nav-link active" aria-current="page" href="/cart">Cart</a>
+                  </li>
+                  
+
+                  <li class="nav-item rounded border ms-5">
+                    <a class="nav-link active " aria-current="page" href="/user/logout">Logout</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+    <div class="container py-5">
+        
+    <div class="row d-flex justify-content-between px-5 ">
+        <h1>Shop</h1>
+                
+        <div class="dropdown mb-3 select">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Open this select Category
+            </button>
+            <ul class="dropdown-menu category" aria-labelledby="dropdownMenuButton1">
+                
+                <li><a href="/dashboard">All</a></li>
+                <li>
+                    <% category.forEach((i) => { %>
+                    <a href="/catagoryPro/<%= i._id %>"><%= i.category %></a>
+                <% }) %>
+                </li>
+                
+            </ul>
+          </div>
+     
+        <hr class="my-5" />
+        <div class="mb-5 pb-5"></div>
+        
+        <% data.forEach((i) => { %>      
+            
+            <form action="/Product/Buyproduct/<%= i._id %>" method="post">
+            <div class="card col-3 mb-5">
+                <img src="/images/<%= i.image %>" style="width: 320px; height: 220px;" class="img-fluid">
+                <div class="card-body">
+
+                    <h6 class="card-title pt-3 fs-5 pb-2 text-capitalize">
+                        <strong>Name</strong> : <%= i.name %>
+                    </h6>
+                    <h6 class="card-title">
+                        <strong>Price</strong> : <%= i.price %>
+                    </h6>
+                    <div class="mb-3">
+                        <div class="quantity-counter pt-2">
+                            <strong> Quantity : &nbsp;</strong>
+                            <input name="addquantity" class="value" type="number" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+        
+                        </div>
+                            <h6 class="card-title">
+                                <strong>Total Stoke</strong>  : <%= i.quantity %>
+                            </h6>
+                           
+                            <div>
+                                <button type="submit" class="btn btn-success mt-3 ">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+            </form>  
+            <% }) %>
+        </div>
+    </div>
+
+       
+</body> 
+</html>
+
+<script>
+
+
+  <% if(flash.success && flash.success.length > 0){ %>
+      new Noty({
+          text : '<%= flash.success %>',
+          type : 'success',
+          timeout : 1000,
+      }).show()
+  <% } %>
+  
+  <% if(flash.error && flash.error.length > 0){ %>
+      new Noty({
+          text : '<%= flash.error %>',
+          type : 'error',
+          timeout : 1000,
+      }).show()
+  <% } %>
+</script>
