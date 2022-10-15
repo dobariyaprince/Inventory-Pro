@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const db = require ('./config/db')
@@ -43,6 +44,6 @@ app.get('/user/login',(req,res) => {
 
 app.use(routes);
 
-app.listen(2001 , () => {
+app.listen(process.env.PORT , () => {
     console.log("Server Connected");
 })  
